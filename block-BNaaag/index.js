@@ -1,34 +1,16 @@
-let fs = require('fs');
-fs.readFile('./content.md', 'utf-8', (err, file) => {
-  if (err) {
-    console.error('Error :', err);
-    return;
-  }
+let { readFile } = require('fs');
+readFile('./create.md', 'utf-8', (err, file) => {
   console.log(file);
 });
 
 2;
-
-const fs = require('fs');
-
-console.log('start');
-function sum(a, b) {
-  console.log('process');
-  return a + b;
-}
-console.log('end');
+let result = readFileSync('./content.md', 'utf8');
 
 3;
-const fs = require('fs');
-
-console.log('start');
-
-function sum(a, b) {
-  console.log('process');
-  return a + b;
-}
-
-console.log('end');
+let { readFile } = require('fs');
+readFile('./create.md', 'utf-8', (err, file) => {
+  console.log(file);
+});
 
 4;
 let buff1 = Buffer.alloc(10);
