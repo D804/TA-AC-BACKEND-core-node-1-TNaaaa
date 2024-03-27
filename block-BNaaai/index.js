@@ -6,5 +6,4 @@ const parsedUrl = url.parse(
 console.log(parsedUrl);
 console.log(parsedUrl.pathname);
 console.log(parsedUrl.query);
-let http = require('http');
-http.createServer(parsedUrl);
+console.log(parsedUrl, parsedUrl.host, parsedUrl.protocol);
