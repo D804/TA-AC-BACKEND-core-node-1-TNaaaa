@@ -2,9 +2,9 @@ let squareArea = (area) => {
   return area * area;
 };
 let circleArea = (radius) => {
-  return Math.PI * radius * radius;
+  return 2 * 3.14 * radius;
 };
-let rectangleArea = (lemgth, width) => {
+let rectangleArea = (length, width) => {
   return length * width;
 };
 module.exports = {

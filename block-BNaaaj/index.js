@@ -1,15 +1,21 @@
-console.log('Welcome to Nodejs');
 let os = require('os');
-console.log(os.cpus(), os.freemem(), os.uptime()), os.version();
+console.log('Welcome to Nodejs');
+
+const cpu = os.cpus().length;
+const freeMem = os.freemem();
+const uptime = os.uptime();
+const version = os.version();
+
+console.log(cpus, freemem, uptime, version);
 const { readFile, unlink } = require('fs');
 
 const buff1 = Buffer.alloc(12);
-console.log(buff1.toString);
+buff1.wwrite('Welcome to node Js');
+console.log(buff1.toString());
 
-let fs = require('fs');
-
-const parse = require('parse');
-let parsedUrl = parse(
-  'https://airindia.com/fares/calculate?from=delhi&to=detroit'
-);
-console.log(parsedUrl.pathname, parsedUrl.protocol, parsedUrl.queryString);
+let { readFile, readFileSync } = require('fs');
+let syncFile = readFileSync('./app.js');
+console.log(syncFile);
+let Async = readFile('./app.js', (err, content) => {
+  console.log(err, content.toString());
+});
