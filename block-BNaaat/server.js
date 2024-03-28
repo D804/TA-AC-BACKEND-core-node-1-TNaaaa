@@ -11,9 +11,12 @@ function handleServer(req, res) {
         res.end(content);
       }
     });
-    fs.createReadStream('./node.html'), pipe(res);
+  } else if (req.method === 'GET' && req.url === '/stream') {
+    res.setHeader('Content-Type', 'text/html');
+    fs.createReadStream('./node.html').pipe(res);
   }
 }
+
 server.listen(5555, () => {
   console.log('Request on localhost 5555');
 });
